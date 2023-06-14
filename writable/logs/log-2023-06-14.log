@@ -1,0 +1,385 @@
+ERROR - 2023-06-14 00:41:08 --> mysqli_sql_exception: Column 'id_genre' in on clause is ambiguous in C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*...', 0)
+#1 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*...')
+#2 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*...')
+#3 C:\xampp\htdocs\MI4CApp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*...', Array, false)
+#4 C:\xampp\htdocs\MI4CApp\app\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\MI4CApp\app\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+#6 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(934): App\Controllers\Film->all()
+#7 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+#8 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\MI4CApp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\MI4CApp\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-14 00:41:08 --> Column 'id_genre' in on clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id_genre` = `film`.`id_genre`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id_genre` = `film`.`id_genre`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id_genre` = `film`.`id_genre`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id_genre` = `film`.`id_genre`', [], false)
+ 5 APPPATH\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->all()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MI4CApp\\public\\index.php')
+ERROR - 2023-06-14 00:41:15 --> mysqli_sql_exception: Unknown column 'genre' in 'on clause' in C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*...', 0)
+#1 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*...')
+#2 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*...')
+#3 C:\xampp\htdocs\MI4CApp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*...', Array, false)
+#4 C:\xampp\htdocs\MI4CApp\app\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\MI4CApp\app\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+#6 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(934): App\Controllers\Film->all()
+#7 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+#8 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\MI4CApp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\MI4CApp\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-14 00:41:15 --> Unknown column 'genre' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`', [], false)
+ 5 APPPATH\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->all()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MI4CApp\\public\\index.php')
+ERROR - 2023-06-14 00:41:18 --> mysqli_sql_exception: Unknown column 'genre' in 'on clause' in C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*...', 0)
+#1 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*...')
+#2 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*...')
+#3 C:\xampp\htdocs\MI4CApp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*...', Array, false)
+#4 C:\xampp\htdocs\MI4CApp\app\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\MI4CApp\app\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+#6 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(934): App\Controllers\Film->all()
+#7 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+#8 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\MI4CApp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\MI4CApp\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-14 00:41:18 --> Unknown column 'genre' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`', [], false)
+ 5 APPPATH\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->all()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MI4CApp\\public\\index.php')
+ERROR - 2023-06-14 00:41:49 --> mysqli_sql_exception: Unknown column 'genre' in 'on clause' in C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*...', 0)
+#1 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*...')
+#2 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*...')
+#3 C:\xampp\htdocs\MI4CApp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*...', Array, false)
+#4 C:\xampp\htdocs\MI4CApp\app\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\MI4CApp\app\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+#6 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(934): App\Controllers\Film->all()
+#7 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+#8 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\MI4CApp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\MI4CApp\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-14 00:41:49 --> Unknown column 'genre' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`', [], false)
+ 5 APPPATH\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->all()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MI4CApp\\public\\index.php')
+ERROR - 2023-06-14 00:41:57 --> mysqli_sql_exception: Column 'id_genre' in on clause is ambiguous in C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*...', 0)
+#1 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*...')
+#2 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*...')
+#3 C:\xampp\htdocs\MI4CApp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*...', Array, false)
+#4 C:\xampp\htdocs\MI4CApp\app\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\MI4CApp\app\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+#6 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(934): App\Controllers\Film->all()
+#7 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+#8 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\MI4CApp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\MI4CApp\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-14 00:41:57 --> Column 'id_genre' in on clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id_genre` = `film`.`id_genre`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id_genre` = `film`.`id_genre`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id_genre` = `film`.`id_genre`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id_genre` = `film`.`id_genre`', [], false)
+ 5 APPPATH\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->all()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MI4CApp\\public\\index.php')
+ERROR - 2023-06-14 00:43:53 --> mysqli_sql_exception: Column 'id_genre' in on clause is ambiguous in C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*...', 0)
+#1 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*...')
+#2 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*...')
+#3 C:\xampp\htdocs\MI4CApp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*...', Array, false)
+#4 C:\xampp\htdocs\MI4CApp\app\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\MI4CApp\app\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+#6 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(934): App\Controllers\Film->all()
+#7 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+#8 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\MI4CApp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\MI4CApp\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-14 00:43:53 --> Column 'id_genre' in on clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id_genre` = `film`.`id_genre`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id_genre` = `film`.`id_genre`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id_genre` = `film`.`id_genre`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id_genre` = `film`.`id_genre`', [], false)
+ 5 APPPATH\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->all()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MI4CApp\\public\\index.php')
+ERROR - 2023-06-14 00:44:19 --> mysqli_sql_exception: Unknown column 'genre' in 'on clause' in C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*...', 0)
+#1 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*...')
+#2 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*...')
+#3 C:\xampp\htdocs\MI4CApp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*...', Array, false)
+#4 C:\xampp\htdocs\MI4CApp\app\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\MI4CApp\app\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+#6 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(934): App\Controllers\Film->all()
+#7 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+#8 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\MI4CApp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\MI4CApp\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-14 00:44:19 --> Unknown column 'genre' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`', [], false)
+ 5 APPPATH\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->all()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MI4CApp\\public\\index.php')
+ERROR - 2023-06-14 00:45:48 --> mysqli_sql_exception: Unknown column 'genre' in 'on clause' in C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*...', 0)
+#1 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*...')
+#2 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*...')
+#3 C:\xampp\htdocs\MI4CApp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*...', Array, false)
+#4 C:\xampp\htdocs\MI4CApp\app\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\MI4CApp\app\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+#6 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(934): App\Controllers\Film->all()
+#7 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+#8 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\MI4CApp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\MI4CApp\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-14 00:45:48 --> Unknown column 'genre' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `genre` = `film`.`id_genre`', [], false)
+ 5 APPPATH\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->all()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MI4CApp\\public\\index.php')
+ERROR - 2023-06-14 00:46:09 --> mysqli_sql_exception: Column 'id' in on clause is ambiguous in C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*...', 0)
+#1 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*...')
+#2 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*...')
+#3 C:\xampp\htdocs\MI4CApp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*...', Array, false)
+#4 C:\xampp\htdocs\MI4CApp\app\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\MI4CApp\app\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+#6 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(934): App\Controllers\Film->all()
+#7 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+#8 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\MI4CApp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\MI4CApp\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-14 00:46:09 --> Column 'id' in on clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id` = `film`.`id_genre`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id` = `film`.`id_genre`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id` = `film`.`id_genre`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON `id` = `film`.`id_genre`', [], false)
+ 5 APPPATH\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->all()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MI4CApp\\public\\index.php')
+ERROR - 2023-06-14 00:47:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= film.id_genre' at line 3 in C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*...', 0)
+#1 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*...')
+#2 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*...')
+#3 C:\xampp\htdocs\MI4CApp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*...', Array, false)
+#4 C:\xampp\htdocs\MI4CApp\app\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\MI4CApp\app\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+#6 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(934): App\Controllers\Film->all()
+#7 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+#8 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\MI4CApp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\MI4CApp\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-14 00:47:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= film.id_genre' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON genre, = film.id_genre', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON genre, = film.id_genre')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON genre, = film.id_genre')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON genre, = film.id_genre', [], false)
+ 5 APPPATH\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->all()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MI4CApp\\public\\index.php')
+ERROR - 2023-06-14 00:47:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= film.id_genre' at line 3 in C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\MI4CApp\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*...', 0)
+#1 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*...')
+#2 C:\xampp\htdocs\MI4CApp\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*...')
+#3 C:\xampp\htdocs\MI4CApp\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*...', Array, false)
+#4 C:\xampp\htdocs\MI4CApp\app\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\MI4CApp\app\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+#6 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(934): App\Controllers\Film->all()
+#7 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+#8 C:\xampp\htdocs\MI4CApp\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\MI4CApp\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\MI4CApp\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-06-14 00:47:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= film.id_genre' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON genre, = film.id_genre', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON genre, = film.id_genre')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON genre, = film.id_genre')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `film`.*, `genre`.`nama_genre`
+FROM `film`
+JOIN `genre` ON genre, = film.id_genre', [], false)
+ 5 APPPATH\Models\FilmModel.php(52): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Film.php(27): App\Models\FilmModel->getAllDataJoin()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->all()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MI4CApp\\public\\index.php')
