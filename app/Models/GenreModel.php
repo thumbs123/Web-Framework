@@ -13,15 +13,7 @@ class GenreModel extends Model
 
     public function getGenre()
     {
-        $data=[
-            [
-                "nama_genre" => "Horror"
-            ],
-            [
-                "nama_genre" => "Action"
-            ],
-        ];
-        return $data;
+    return $this->findAll();
 
     }
     public function getAllData(){

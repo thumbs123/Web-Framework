@@ -9,7 +9,7 @@ class FilmModel extends Model
     protected $table = 'film';
 	protected $primaryKey = 'id';
     protected $UseAutoIncrement = true;
-    protected $allowedFields = [];
+    protected $allowedFields = ['nama_film','id_genre','duration','cover'];
 
     public function getFilm()
     {

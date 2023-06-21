@@ -23,10 +23,10 @@
           <a class="nav-link" href="/film">Semua Film</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Kategori Film</a>
+          <a class="nav-link" href="/genre">Kategori Film</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Tentang Kami</a>
+          <a class="nav-link" href="/about">Tentang Kami</a>
         </li>
       </ul>
     </div>
@@ -34,6 +34,13 @@
 </nav>
 
 <div class="container">
+<div class="row">
+        <div class="col-md-6">
+          <h1>Semua Film</h1>
+        </div>
+        <div class="col-md-6 text-end">
+          <a href="film/add" class="btn btn-primary">Tambah Data</a>
+        </div>
 <div class="row">
     <div class="col-md-12">
         <table class="table table-hover">
@@ -51,12 +58,12 @@
                 <tr>
                 <td><?= $i++; ?></td>
                 <td><?= $film ["nama_film"] ?> </td>
-                <td><img src="/assets/cover/<?= $film["cover"] ?>" class="card-img-top" alt="..."></td>
+                <td><img width="50px" height="76px" src="/assets/cover/<?= $film["cover"] ?>" class="card-img-top" alt="..." ></td>
                 <td><?= $film ["nama_genre"] ?> </td>
                 <td><?= $film ["duration"] ?> </td>
                 <td>
-                <a href="#" class="btn btn-success">Update</a>
-                <a href="#" class="btn btn-delete">Delete</a>
+                <a href="/film/update/<?= $film["id"]; ?>" class="btn btn-success">Update</a>
+                <a href="" class="btn btn-danger">Delete</a>
                 </td>
                 </tr>
             <?php endforeach; ?>
@@ -68,5 +75,4 @@
 
     <script src="assets/js/bootstrap.min.js"></script>
 </body>
-
 </html>

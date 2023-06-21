@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LK21</title>
+    <title>Layar Kaca 8080</title>
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <script src="/assets/js/unpkg.com_sweetalert@2.1.2_dist_sweetalert.min.js"></script> <!-- tambahkan ini -->
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-primary text-light">
-  
-      </div>
+<nav class="navbar navbar-expand-lg bg-primary text-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">LK21</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +26,7 @@
           <a class="nav-link" href="/film">Semua Film</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/genre">Kategori Film</a>
+          <a class="nav-link" href="/genre/all">Kategori Film</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/about">Tentang Kami</a>
@@ -34,28 +35,19 @@
     </div>
   </div>
 </nav>
+<?php $this->renderSection('content');?>
+<script src="assets/js/bootstrap.min.js"></script>
+<?php if (session()->getFlashdata('success')) : ?>
+        <script>
+            swal({
+                title: "Informasi",
+                text: "<?= session()->getFlashdata('success') ?>",
+                icon: "success",
+                button: "OK",
+            });
+        </script>
 
-<div class="container">
-
-<div class="row">
-    <?php foreach ($semuafilm as $film) : ?>
-<div class="col-md-3">
-<div class="card">
-  <img src="/assets/cover/<?= $film["cover"] ?>" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"><?= $film["nama_film"] ?> </h5>
-    <p class="card-text"><?= $film["nama_genre"] ?> || <?= $film["duration"] ?> </p>
-    <a href="#" class="btn btn-info">Detail</a>
-    <a href="#" class="btn btn-success">Update</a>
-    <a href="#" class="btn btn-warning">Delete</a>
-  </div>
-</div>
-</div>
-<?php endforeach; ?>
-</div>
-</div>
-
-    <script src="assets/js/bootstrap.min.js"></script>
+    <?php endif; ?>
 </body>
 
 </html>
