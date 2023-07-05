@@ -1,13 +1,18 @@
-<?php
+<?= $this->extend('/layout/layout')?>
 
-namespace App\Controllers;
+<?= $this->section('content')?>
 
-use App\Controllers\BaseController;
+<div class="container">
+    <h1>Tentang Kami</h1>
 
-class About extends BaseController
-{
-    public function index()
-    {
-        return view('tentang/index');
-    }
-}
+    <div style="text-align:justify;">
+
+    <p>Selamat datang di LK21 </p>
+
+    <p>tempatnya nonton banyak film</p>
+    <p>yang membuat anda jadi betah untuk menonton</p>
+
+</div>
+</div>
+
+<?= $this->endSection()?>

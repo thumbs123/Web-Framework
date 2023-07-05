@@ -1,0 +1,346 @@
+INFO - 2023-07-03 11:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 11:55:56 --> openssl_decrypt(): IV passed is only 1 bytes long, cipher expects an IV of precisely 16 bytes, padding with \0
+in APPPATH\Helpers\url_helper.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'openssl_decrypt(): IV passed is only 1 bytes long, cipher expects an IV of precisely 16 bytes, padding with \\0', 'C:\\thumberly\\web-framework\\app\\Helpers\\url_helper.php', 19)
+ 2 APPPATH\Helpers\url_helper.php(19): openssl_decrypt('', 'AES-256-CBC', Object(SensitiveParameterValue), 0, '×')
+ 3 APPPATH\Controllers\Film.php(96): decryptUrl('14')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->update('14')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+CRITICAL - 2023-07-03 11:58:48 --> openssl_decrypt(): IV passed is only 1 bytes long, cipher expects an IV of precisely 16 bytes, padding with \0
+in APPPATH\Helpers\url_helper.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'openssl_decrypt(): IV passed is only 1 bytes long, cipher expects an IV of precisely 16 bytes, padding with \\0', 'C:\\thumberly\\web-framework\\app\\Helpers\\url_helper.php', 19)
+ 2 APPPATH\Helpers\url_helper.php(19): openssl_decrypt('', 'AES-256-CBC', Object(SensitiveParameterValue), 0, '×')
+ 3 APPPATH\Controllers\Film.php(96): decryptUrl('14')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->update('14')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 12:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 12:04:34 --> Undefined variable $decryptedId
+in APPPATH\Controllers\Film.php on line 98.
+ 1 APPPATH\Controllers\Film.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $decryptedId', 'C:\\thumberly\\web-framework\\app\\Controllers\\Film.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->update('O0yrVsYf4rdTs5CcohyZX0ZjN1Q4TzZGeitwT2FXbXZEN0FQSVE9PQ==')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 12:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 12:05:23 --> Call to undefined method App\Models\FilmModel::getDataByID
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Film.php(98): CodeIgniter\Model->__call('getDataByID', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->update('O0yrVsYf4rdTs5CcohyZX0ZjN1Q4TzZGeitwT2FXbXZEN0FQSVE9PQ==')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 12:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 12:10:29 --> Call to undefined method App\Models\FilmModel::getDataByID
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Film.php(98): CodeIgniter\Model->__call('getDataByID', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->update('O0yrVsYf4rdTs5CcohyZX0ZjN1Q4TzZGeitwT2FXbXZEN0FQSVE9PQ==')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 12:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 12:17:43 --> Call to undefined method App\Models\FilmModel::getDataByID
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Film.php(98): CodeIgniter\Model->__call('getDataByID', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->update('O0yrVsYf4rdTs5CcohyZX0ZjN1Q4TzZGeitwT2FXbXZEN0FQSVE9PQ==')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 12:20:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:20:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:21:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:21:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:21:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 12:30:15 --> syntax error, unexpected token "if", expecting "function" or "const"
+in APPPATH\Controllers\Film.php on line 95.
+ 1 SYSTEMPATH\Router\Router.php(507): CodeIgniter\Router\AutoRouter->getRoute('film')
+ 2 SYSTEMPATH\Router\Router.php(206): CodeIgniter\Router\Router->autoRoute('film')
+ 3 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('film')
+ 4 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+CRITICAL - 2023-07-03 12:30:15 --> syntax error, unexpected token "if", expecting "function" or "const"
+in APPPATH\Controllers\Film.php on line 95.
+ 1 SYSTEMPATH\Router\Router.php(507): CodeIgniter\Router\AutoRouter->getRoute('film')
+ 2 SYSTEMPATH\Router\Router.php(206): CodeIgniter\Router\Router->autoRoute('film')
+ 3 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('film')
+ 4 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+CRITICAL - 2023-07-03 12:36:57 --> Undefined variable $data_film
+in APPPATH\Views\film\index.php on line 57.
+ 1 APPPATH\Views\film\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_film', 'C:\\thumberly\\web-framework\\app\\Views\\film\\index.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\thumberly\\web-framework\\app\\Views\\film\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('film/index', [], true)
+ 5 APPPATH\Controllers\Film.php(25): view('film/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 12:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 12:54:50 --> Undefined array key "id_genre"
+in APPPATH\Views\film\add.php on line 36.
+ 1 APPPATH\Views\film\add.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_genre"', 'C:\\thumberly\\web-framework\\app\\Views\\film\\add.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\thumberly\\web-framework\\app\\Views\\film\\add.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('film/add', [], true)
+ 5 APPPATH\Controllers\Film.php(44): view('film/add', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->add()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 12:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:56:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 12:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:12:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 13:30:18 --> Invalid file: "layout/page_layout.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/page_layout.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/page_layout', [], true)
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('film/index', [], true)
+ 4 APPPATH\Controllers\Film.php(37): view('film/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->all()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 13:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:33:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 13:33:32 --> Call to undefined method App\Models\FilmModel::getDataByID
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Film.php(105): CodeIgniter\Model->__call('getDataByID', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->update('20')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 13:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:33:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 13:42:54 --> Call to undefined method App\Models\FilmModel::getDataByID
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Film.php(105): CodeIgniter\Model->__call('getDataByID', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->update('12')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 13:43:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 13:53:24 --> Invalid file: "/layout/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/layout/index.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('/layout/index', [], true)
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('tentang/index', [], true)
+ 4 APPPATH\Controllers\About.php(11): view('tentang/index')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\About->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\About))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+CRITICAL - 2023-07-03 13:54:46 --> Invalid file: "/layout/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/layout/index.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('/layout/index', [], true)
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('tentang/index', [], true)
+ 4 APPPATH\Controllers\About.php(11): view('tentang/index')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\About->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\About))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 13:54:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 13:54:55 --> Invalid file: "/layout/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/layout/index.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('/layout/index', [], true)
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('tentang/index', [], true)
+ 4 APPPATH\Controllers\About.php(11): view('tentang/index')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\About->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\About))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+CRITICAL - 2023-07-03 13:55:28 --> Invalid file: "/layout/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/layout/index.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('/layout/index', [], true)
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('tentang/index', [], true)
+ 4 APPPATH\Controllers\About.php(11): view('tentang/index')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\About->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\About))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 13:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 13:55:36 --> Invalid file: "/layout/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/layout/index.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('/layout/index', [], true)
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('tentang/index', [], true)
+ 4 APPPATH\Controllers\About.php(11): view('tentang/index')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\About->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\About))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+CRITICAL - 2023-07-03 13:56:16 --> Invalid file: "/layout/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/layout/index.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('/layout/index', [], true)
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('tentang/index', [], true)
+ 4 APPPATH\Controllers\About.php(11): view('tentang/index')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\About->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\About))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+CRITICAL - 2023-07-03 13:56:22 --> Invalid file: "/layout/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/layout/index.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('/layout/index', [], true)
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('tentang/index', [], true)
+ 4 APPPATH\Controllers\About.php(11): view('tentang/index')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\About->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\About))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 13:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:57:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 13:57:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 14:00:09 --> Call to undefined method CodeIgniter\Router\AutoRouter::extend()
+in APPPATH\Controllers\about.php on line 1.
+ 1 SYSTEMPATH\Router\AutoRouter.php(147): include_once()
+ 2 SYSTEMPATH\Router\Router.php(507): CodeIgniter\Router\AutoRouter->getRoute('about')
+ 3 SYSTEMPATH\Router\Router.php(206): CodeIgniter\Router\Router->autoRoute('about')
+ 4 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('about')
+ 5 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+CRITICAL - 2023-07-03 14:00:32 --> Call to undefined method CodeIgniter\Router\AutoRouter::extend()
+in APPPATH\Controllers\about.php on line 1.
+ 1 SYSTEMPATH\Router\AutoRouter.php(147): include_once()
+ 2 SYSTEMPATH\Router\Router.php(507): CodeIgniter\Router\AutoRouter->getRoute('about')
+ 3 SYSTEMPATH\Router\Router.php(206): CodeIgniter\Router\Router->autoRoute('about')
+ 4 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('about')
+ 5 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 14:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:21:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:22:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 14:26:26 --> Undefined variable $data_film
+in APPPATH\Views\film\semuafilm.php on line 57.
+ 1 APPPATH\Views\film\semuafilm.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_film', 'C:\\thumberly\\web-framework\\app\\Views\\film\\semuafilm.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\thumberly\\web-framework\\app\\Views\\film\\semuafilm.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('film/semuafilm', [], true)
+ 5 APPPATH\Controllers\Film.php(32): view('film/semuafilm', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->all()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 14:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-03 14:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 14:30:06 --> Undefined variable $data_film
+in APPPATH\Views\film\semuafilm.php on line 57.
+ 1 APPPATH\Views\film\semuafilm.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_film', 'C:\\thumberly\\web-framework\\app\\Views\\film\\semuafilm.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\thumberly\\web-framework\\app\\Views\\film\\semuafilm.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('film/semuafilm', [], true)
+ 5 APPPATH\Controllers\Film.php(32): view('film/semuafilm', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->all()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+CRITICAL - 2023-07-03 14:32:11 --> Undefined variable $data_film
+in APPPATH\Views\film\semuafilm.php on line 57.
+ 1 APPPATH\Views\film\semuafilm.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_film', 'C:\\thumberly\\web-framework\\app\\Views\\film\\semuafilm.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\thumberly\\web-framework\\app\\Views\\film\\semuafilm.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('film/semuafilm', [], true)
+ 5 APPPATH\Controllers\Film.php(32): view('film/semuafilm', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->all()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')
+INFO - 2023-07-03 14:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-03 14:37:01 --> Undefined variable $semuafilm
+in APPPATH\Views\film\index.php on line 16.
+ 1 APPPATH\Views\film\index.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $semuafilm', 'C:\\thumberly\\web-framework\\app\\Views\\film\\index.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\thumberly\\web-framework\\app\\Views\\film\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('film/index', [], true)
+ 5 APPPATH\Controllers\Film.php(28): view('film/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Film->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Film))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\thumberly\\web-framework\\public\\index.php')

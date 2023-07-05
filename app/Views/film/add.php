@@ -1,22 +1,22 @@
-<?php $this->extend("layout/layout");?>
+<?= $this->extend('layout/Layout') ?>
+<?= $this->section('content') ?>
 
-<?php $this->section("content");?>
-
-<div class="row">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h1>Tambah Data</h1>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="/film" class="btn btn-dark">Kembali</a>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row mb-0">
+                        <div class="col-md-6">
+                            <h2>Halaman Tambah Data Film</h2>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <a href="/film" class="btn btn-dark"> Kembali</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-body">
-            <form action="/film/store" method="POST" enctype="multipart/form-data">
+                <div class="card-body">
+                <form action="/film/store" method="POST" enctype="multipart/form-data">
                     <div class="row">
 
                         <div class="col-md-6">
@@ -67,10 +67,10 @@
                         </div>
                     </div>
                 </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-
-<?php $this->endSection();
+<?= $this->endSection() ?>

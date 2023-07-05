@@ -24,7 +24,7 @@ class Film extends BaseController
 
     public function index()
     {
-        $data['data_film'] = $this->film->getAllDataJoin();
+        $data['datafilm'] = $this->film->getAllDataJoin();
         return view("film/index",$data);
     }
     public function all(){
@@ -93,6 +93,76 @@ class Film extends BaseController
         $data["genre"] = $this->genre->getAllData();
         $data["errors"] = session('errors');
         $data["semuafilm"] = $this->film->getDataID($id);
-        return view("film/update",$data);
+        return view("film/edit",$data);
+    }
+    public function edit()
+    {
+        $validation = $this->validate([
+            'nama_film' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Kolom Nama Film harus diisi'
+                ]
+            ],
+            'id_genre' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Kolom Genre Harus diisi'
+                ]
+            ],
+            'duration' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Kolom Durasi Harus diisi'
+                ]
+            ],
+            // ubah rulesnya
+            'cover' => [
+                'rules' => 'mime_in[cover,image/jpg,image/jpeg,image/webp,image/png]|max_size[cover,2048]',
+                'errors' => [
+                    'uploaded' => 'Kolom Cover harus berisi File',
+                    'mime_in' => 'Tipe file pada kolom harus berupa JPG, JPEG, PNG',
+                    'max_size' => 'Ukuran file berisi file melebihi batas maksimum'
+                ]
+            ]
+        ]);
+
+        if (!$validation) {
+            $errors = \Config\Services::validation()->getErrors();
+
+            return redirect()->back()->withInput()->with('errors', $errors);
+        }
+
+        $film = $this->film->find($this->request->getPost('id'));
+
+        $data = [
+            'id' => $this->request->getPost('id'),
+            'nama_film' => $this->request->getPost('nama_film'),
+            'id_genre' => $this->request->getPost('id_genre'),
+            'duration' => $this->request->getPost('duration'),
+
+        ];
+
+        $cover = $this->request->getFile('cover');
+        if ($cover->isValid() && !$cover->hasMoved()) {
+        $imageName = $cover->getRandomName();
+        $cover->move(ROOTPATH . 'public/assets/cover/', $imageName);
+        if ($film['cover']) {
+            unlink(ROOTPATH . 'public/assets/cover/' . $film['cover']);
+        }
+            $data['cover'] = $imageName;
+        }
+
+        $this->film->save($data);
+    
+        session()->setFlashdata('success', 'Data berhasil diupdate.');
+        return redirect()->to("/film");
+    }
+
+    public function destroy($id)
+    {
+        $this->film->delete($id);
+        session()->setFlashdata('success', 'Data berhasil dihapus');
+        return redirect()->to('/film');
     }
 }
