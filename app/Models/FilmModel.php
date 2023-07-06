@@ -45,13 +45,13 @@ class FilmModel extends Model
     public function getAllData(){
         return $this->findAll();
     }
-    public function getDataID(){
-        return $this->find();
+    public function getDataByID($id){
+        return $this->find($id);
     }
     public function getAllDataJoin(){
         $query = $this->db->table("film")
         ->select("film.*, genre.nama_genre")
-        ->join("genre", "genre.id = film.id_genre");
+        ->join("genre", "genre.id_genre = film.id_genre");
         return $query->get()->getResultArray();
     }
     public function genre($data){

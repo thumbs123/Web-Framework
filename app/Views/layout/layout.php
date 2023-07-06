@@ -26,7 +26,7 @@
                         <a class="nav-link" href="/film">Semua Film</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/genre/all">Genre</a>
+                        <a class="nav-link" href="/genre/index">Genre</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/about">Tentang Kami</a>

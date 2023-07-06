@@ -16,9 +16,9 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="/film/update" method="POST" enctype="multipart/form-data">
+                    <form action="/film/edit" method="POST" enctype="multipart/form-data">
                         <div class="row">
-                            <input type="hidden" value="<?= ($semuafilm["id"]) ?>" name="id"> 
+                            <input type="hidden" value="<?= $film["id"] ?>" name="id"> 
                             <div class="col-md-6">
                                 <label for="nama_film" class="form-label">Nama Film</label>
                                 

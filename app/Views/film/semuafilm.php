@@ -1,7 +1,6 @@
 <?= $this->extend('layout/layout') ?>
 
 <?= $this->section('content') ?>
-
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -19,7 +18,7 @@
                                             <img src="/assets/cover/<?= $film["cover"] ?>" class="card-img-top">
                                             <div class="card-body">
                                                 <h5 class="card-title">
-                                                  <?= $film["nama_film"] ?>
+                                                    <?= $film["nama_film"] ?>
                                                 </h5>
                                                 <p class="card-text">
                                                     <?= $film["nama_genre"] ?> ||
@@ -27,14 +26,13 @@
                                                 </p>
                                                 <a href="#" class="btn btn-info">Detail</a>
                                                 <a href="#" class="btn btn-success">Update</a>
-    <a href="#" class="btn btn-warning">Delete</a>
-</div>
-</div>
-</div>
-<?php endforeach; ?>
-</div>
-</div>
+                                                <a href="#" class="btn btn-warning">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
 
-<script src="/assets/js/bootstrap.min.js"></script>
 <?= $this->endSection() ?>
 

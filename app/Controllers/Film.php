@@ -89,11 +89,13 @@ class Film extends BaseController
         session()->setFlashdata('success', 'Data berhasil disimpan.'); // tambahkan ini
         return redirect()->to('/film');
     }
-    public function update($id){
+    public function update($id)
+    {
+        $decryptedId = decryptUrl($id);
         $data["genre"] = $this->genre->getAllData();
         $data["errors"] = session('errors');
-        $data["semuafilm"] = $this->film->getDataID($id);
-        return view("film/edit",$data);
+        $data["film"] = $this->film->getDataByID($decryptedId);
+        return view("film/edit", $data);
     }
     public function edit()
     {
@@ -161,8 +163,10 @@ class Film extends BaseController
 
     public function destroy($id)
     {
-        $this->film->delete($id);
-        session()->setFlashdata('success', 'Data berhasil dihapus');
+        $decryptedId = decryptUrl($id);
+        $this->film->delete($decryptedId);
+        session()->setFlashdata('success', 'Data berhasil dihapus.');
+
         return redirect()->to('/film');
     }
 }

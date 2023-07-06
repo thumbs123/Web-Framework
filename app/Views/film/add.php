@@ -33,7 +33,7 @@
                             <select name="id_genre" id="genre" class="form-control <?= isset($errors['id_genre']) ? 'is-invalid ' : ''; ?>" name="id_genre" value="<?= old('id_genre'); ?>">
                                 <option value="">PILIH..</option>
                                 <?php foreach ($genre as $g) : ?>
-                                    <option value="<?= $g["id"] ?>"><?= $g["nama_genre"] ?></option>
+                                    <option value="<?= $g["id_genre"] ?>"><?= $g["nama_genre"] ?></option>
                                 <?php endforeach; ?>
                             </select>
                             <?php if (isset($errors['id_genre'])) : ?>

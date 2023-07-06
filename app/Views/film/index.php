@@ -28,12 +28,12 @@
                 <tr>
                 <td><?= $i++; ?></td>
                 <td><?= $film ["nama_film"] ?> </td>
-                <td><img width="50px" height="76px" src="/assets/cover/<?= $film["cover"] ?>" class="card-img-top" alt="..." ></td>
+                <td><img width="30px" height="100px" src="/assets/cover/<?= $film["cover"] ?>" class="card-img-top" alt="..." ></td>
                 <td><?= $film ["nama_genre"] ?> </td>
                 <td><?= $film ["duration"] ?> </td>
                 <td>
-                    <a href="/film/update/<?= $film["id"]; ?>" class="btn btn-success">Update</a>
-                    <a class="btn btn-danger" onclick="return confirmDelete()">Delete</a>
+                <a href="/film/update/<?= encryptUrl($film["id"]); ?>" class="btn btn-success">Update</a>
+                <a class="btn btn-danger" onclick="return confirmDelete()">Delete</a>
                 </td>
                 </tr>
             <?php endforeach; ?>
@@ -55,7 +55,7 @@
             .then((willDelete) => {
                 if (willDelete) {
 
-                    window.location.href = "/film/destroy/<?= $film['id'] ?>";
+                    window.location.href = "/film/destroy/<?= encryptUrl($film['id']) ?>";
 
                 } else {
                     swal("Data tidak jadi dihapus!");
@@ -63,5 +63,5 @@
             });
     }
 </script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
 <?= $this->endSection() ?>

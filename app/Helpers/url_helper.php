@@ -16,5 +16,5 @@ function decryptUrl($encryptedData)
     $ivLength = openssl_cipher_iv_length('AES-256-CBC');
     $iv = substr($decodedData, 0, $ivLength);
     $encrypted = substr($decodedData, $ivLength);
-    return openssl_decrypt($encrypted, 'AES-256-CBC', $key, 0, $iv);
+    //2`return openssl_decrypt($encrypted, 'AES-256-CBC', $key, 0, $iv);
 }
